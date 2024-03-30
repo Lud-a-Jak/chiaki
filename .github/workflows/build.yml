@@ -157,12 +157,12 @@ jobs:
         run: |
           mkdir Chiaki-VC-Qt6
           cp build\gui\Release\chiaki.exe Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\openssl\x64\bin\libcrypto-3-x64.dll" Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\openssl\x64\bin\libssl-3-x64.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\openssl\x64\bin\libcrypto-*-x64.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\openssl\x64\bin\libssl-*-x64.dll" Chiaki-VC-Qt6
           cp "${{ github.workspace }}\SDL2\lib\x64\SDL2.dll" Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\ffmpeg\bin\swresample-4.dll" Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\ffmpeg\bin\avcodec-59.dll" Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\ffmpeg\bin\avutil-57.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\ffmpeg\bin\swresample-*.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\ffmpeg\bin\avcodec-*.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\ffmpeg\bin\avutil-*.dll" Chiaki-VC-Qt6
           windeployqt.exe --no-translations Chiaki-VC-Qt6\chiaki.exe
 
       - name: Package Chiaki
