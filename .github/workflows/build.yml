@@ -108,7 +108,7 @@ jobs:
           target: 'desktop'
           arch: 'win64_msvc2019_64'
           modules: 'qtmultimedia'
-          aqtversion: '==6.6.3'
+          aqtversion: '==3.1.2'
 
       - name: Setup MSVC
         uses: ilammy/msvc-dev-cmd@v1
@@ -157,8 +157,8 @@ jobs:
         run: |
           mkdir Chiaki-VC-Qt6
           cp build\gui\Release\chiaki.exe Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\openssl\x64\bin\libcrypto-1_1-x64.dll" Chiaki-VC-Qt6
-          cp "${{ github.workspace }}\openssl\x64\bin\libssl-1_1-x64.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\openssl\x64\bin\libcrypto-3-x64.dll" Chiaki-VC-Qt6
+          cp "${{ github.workspace }}\openssl\x64\bin\libssl-3-x64.dll" Chiaki-VC-Qt6
           cp "${{ github.workspace }}\SDL2\lib\x64\SDL2.dll" Chiaki-VC-Qt6
           cp "${{ github.workspace }}\ffmpeg\bin\swresample-4.dll" Chiaki-VC-Qt6
           cp "${{ github.workspace }}\ffmpeg\bin\avcodec-59.dll" Chiaki-VC-Qt6
